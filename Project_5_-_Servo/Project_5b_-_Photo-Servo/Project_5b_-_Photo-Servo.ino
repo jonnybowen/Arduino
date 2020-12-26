@@ -1,4 +1,5 @@
 //Learning how to control a servo with a photo-transistor.
+//Variation of Project 5 - Servo
 
 #include <Servo.h> // Servo Library
 
@@ -22,8 +23,10 @@ void setup() {
 
 void loop() {
 
+  //Read the photo-transistor value; map value to angle; actuate servo.
+
   photoVal = analogRead(photoPin);
-  delay(5);
+  delay(5); // 5ms delay to reduce serial-monitor spam
 
   Serial.print("Photo-Val: "); //Print Serial Monitor Values
   Serial.print(photoVal);
